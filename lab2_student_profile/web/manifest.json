@@ -1,6 +1,6 @@
 {
-    "name": "lab2_student_profile",
-    "short_name": "lab2_student_profile",
+    "name": "lab2",
+    "short_name": "lab2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

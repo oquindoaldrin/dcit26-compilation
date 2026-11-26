@@ -1,4 +1,4 @@
-package com.example.lab2_student_profile
+package com.example.lab2
 
 import io.flutter.embedding.android.FlutterActivity
 

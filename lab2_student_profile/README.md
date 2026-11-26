@@ -1,4 +1,4 @@
-# lab2_student_profile
+# lab2
 
 A new Flutter project.
 
