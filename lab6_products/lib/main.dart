@@ -18,7 +18,6 @@ class Product {
   final String price; // extra field to match the sample output
 }
 
-// In-memory list (Instruction 2)
 const List<Product> products = [
   Product(
     id: 'P-001',
@@ -40,6 +39,41 @@ const List<Product> products = [
     description: 'Adjustable LED lamp with warm light.',
     rating: 4.7,
     price: '₱850',
+  ),
+  Product(
+    id: 'P-004',
+    title: 'Mechanical Keyboard',
+    description: 'Compact keyboard with tactile switches and backlight.',
+    rating: 4.6,
+    price: '₱1,899',
+  ),
+  Product(
+    id: 'P-005',
+    title: 'USB Flash Drive 64GB',
+    description: 'Fast and portable storage for school files.',
+    rating: 4.3,
+    price: '₱350',
+  ),
+  Product(
+    id: 'P-006',
+    title: 'Bluetooth Earphones',
+    description: 'Wireless earphones with clear sound and long battery life.',
+    rating: 4.4,
+    price: '₱749',
+  ),
+  Product(
+    id: 'P-007',
+    title: 'Backpack',
+    description: 'Water-resistant backpack with a laptop compartment.',
+    rating: 4.8,
+    price: '₱1,150',
+  ),
+  Product(
+    id: 'P-008',
+    title: 'Scientific Calculator',
+    description: 'Multi-function calculator for math and engineering classes.',
+    rating: 4.9,
+    price: '₱699',
   ),
 ];
 
