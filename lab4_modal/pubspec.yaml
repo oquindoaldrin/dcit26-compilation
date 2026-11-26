@@ -1,0 +1,5 @@
+name: "lab4_modal"
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/sample_modal_image.png
