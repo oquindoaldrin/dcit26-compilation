@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import '/app_drawer.dart';
 import 'profile_screen.dart';
 
@@ -10,27 +10,34 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Home')),
       drawer: const AppDrawer(currentRoute: '/'),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Welcome Home', style: TextStyle(fontSize: 20)),
-            const SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => const ProfileScreen(),
-                  ),
-                );
-              },
-              child: const Text('OPEN PROFILE'),
-            ),
-          ],
+     body: Center(
+  child: Padding(
+    padding: const EdgeInsets.all(16),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        const Text(
+          'Welcome Home',
+          style: TextStyle(fontSize: 20),
+          textAlign: TextAlign.center,
         ),
-      ),
+        const SizedBox(height: 16),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                builder: (context) => const ProfileScreen(),
+              ),
+            );
+          },
+          child: const Text('OPEN PROFILE'),
+        ),
+      ],
+    ),
+  ),
+),
     );
   }
-}
+} 
