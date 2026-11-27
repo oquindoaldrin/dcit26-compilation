@@ -1,4 +1,4 @@
-# lab7
+# lab7_networking
 
 A new Flutter project.
 

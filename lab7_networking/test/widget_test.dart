@@ -1,38 +1,30 @@
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lab7/main.dart';
+import 'package:material_ui/material_ui.dart';
+
+import 'package:lab7_networking/main.dart';
 
 void main() {
-  testWidgets('Random User app builds', (WidgetTester tester) async {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
 
-    expect(find.text('Random User'), findsOneWidget);
-  });
-
-  test('RandomUser parses API data', () {
-    final user = RandomUser.fromJson({
-      'name': {'title': 'Ms', 'first': 'Ada', 'last': 'Lovelace'},
-      'location': {
-        'street': {'number': 1, 'name': 'St James Square'},
-        'city': 'London',
-        'state': 'England',
-        'country': 'United Kingdom',
-        'postcode': 'SW1',
-        'timezone': {'offset': '+00:00', 'description': 'London'},
-      },
-      'gender': 'female',
-      'email': 'ada@example.com',
-      'login': {'username': 'ada', 'uuid': '123'},
-      'dob': {'date': '1815-12-10T00:00:00Z', 'age': '211'},
-      'registered': {'date': '2020-01-01T00:00:00Z'},
-      'phone': '123',
-      'cell': '456',
-      'id': {'name': 'NINO', 'value': 'AB123'},
-      'nat': 'GB',
-      'picture': {'large': 'https://example.com/ada.jpg'},
-    });
-
-    expect(user.fullName, 'Ms Ada Lovelace');
-    expect(user.dob, '1815-12-10');
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
   });
 }
